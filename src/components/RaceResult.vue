@@ -99,10 +99,10 @@ export default {
         },
 
         copyRaceJson() {
-            if (this.raceId == -1) return alert('invalid race result');
+/*             if (this.raceId == -1) return alert('invalid race result');
             if (this.fastestLapDriverId == -1) return alert('invalid race result');
             if (!this.result.every(e => e != -1)) return alert('invalid race result');
-
+ */
             const obj = {
                 raceId: this.raceId,
                 fastestLapDriverId: this.fastestLapDriverId,

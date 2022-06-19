@@ -1,16 +1,20 @@
 <template>
     <div>
-
-        <race-result />
-
+        <race-result
+            v-if='1 == 2'
+        />
+        <driver-standings
+        
+        />
     </div>
 </template>
 
 <script>
+import DriverStandings from './components/DriverStandings.vue'
 import RaceResult from './components/RaceResult.vue'
 
 export default {
-	components: { RaceResult },
+	components: { RaceResult, DriverStandings },
 
 }
 </script>
@@ -20,6 +24,7 @@ export default {
     padding: 0;
     margin: 0;
     font-size: 18px;
+    font-family: Arial;
 }
 
 select {
