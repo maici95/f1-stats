@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+
+        <race-result />
+
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import RaceResult from './components/RaceResult.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	components: { RaceResult },
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+select {
+    font-size: 18px;
+    height: 60px;
+    padding: 0 10px;
+}
+option {
+    zoom: 1.5;
+}
+button {
+    padding: 20px;
 }
 </style>
