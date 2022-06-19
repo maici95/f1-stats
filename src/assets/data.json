@@ -1,4 +1,7 @@
 {
+    "season": {
+        "races": 22
+    },
     "drivers": [
         { "id": 1, "name": "Max Verstappen", "teamId": 1 },
         { "id": 4, "name": "Sergio Perez", "teamId": 1 },

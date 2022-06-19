@@ -3,6 +3,12 @@
         <race-result
             v-if='1 == 2'
         />
+        <season-header
+        
+        />
+        <last-race
+        
+        />
         <driver-standings
         
         />
@@ -11,10 +17,12 @@
 
 <script>
 import DriverStandings from './components/DriverStandings.vue'
+import LastRace from './components/LastRace.vue'
 import RaceResult from './components/RaceResult.vue'
+import SeasonHeader from './components/SeasonHeader.vue'
 
 export default {
-	components: { RaceResult, DriverStandings },
+	components: { RaceResult, DriverStandings, SeasonHeader, LastRace },
 
 }
 </script>
@@ -23,10 +31,11 @@ export default {
 * {
     padding: 0;
     margin: 0;
-    font-size: 18px;
     font-family: Arial;
 }
-
+body {
+    background: #F3F3F3;
+}
 select {
     font-size: 18px;
     height: 60px;

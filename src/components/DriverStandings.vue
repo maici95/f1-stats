@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class='container'>
         <div
             v-for='(d, i) in driverStandings'
             :key='i'
@@ -10,7 +10,7 @@
         >
             <div>{{ i + 1 }}</div>
             <div>{{ d.name }}</div>
-            <div>{{ d.team.name }}</div>
+            <div class='team-name'>{{ d.team.name }}</div>
             <div>{{ d.points }}</div>
         </div>
     </div>
@@ -88,11 +88,26 @@ export default {
     grid-template-columns: 10% 40% 40% 10%;
     padding: 15px;
     border-bottom: 1px solid #ddd;
+    background: #ffffff;
 }
 .row > *:last-child {
     text-align: right;
 }
+.row > *:last-child,
+.row > *:first-child
+{
+    font-weight: bold;
+}
 .row:hover {
     background: #ddd;
+}
+.team-name {
+    font-style: italic;
+}
+.container {
+    border: 1px solid #ddd;
+}
+.container > *:last-child {
+    border-bottom: 0;
 }
 </style>
