@@ -10,17 +10,30 @@
                 :key='i'
                 class='podium'
             >
-                <img
-                    src='@/assets/unk.png'
-                    class='driver-image'
-                />
+<!--                 <div style='display: flex; justify-content: center;'>
+                    <img
+                        src='@/assets/unk.png'
+                        class='driver-image'
+                    />
+                    <h2 style='line-height: 180px; font-size: 50px;'>
+                        {{ [25, 18, 15][i] }} pts
+                    </h2>
+                    <img
+                        src="@/assets/arr.png"
+                        style='height: 40px; margin-top: 70px;'
+                    />
+                    <h2 style='line-height: 180px; font-size: 60px;'>
+                        {{ 100 }} pts
+                    </h2>
+                </div> -->
                 <div
                     class='name-tag'
                     :style='{
                         background: teamColor(d.teamId)
                     }'
                 >
-                    {{ d.name }}
+                    <div>{{ i + 1 }}</div>
+                    <div>{{ d.name }}</div>
                 </div>
             </div>
         </div>
@@ -39,8 +52,8 @@ export default {
 
         top3() {
             return [
-                data.drivers.find(e => e.id == results[results.length - 1].result[1]),
                 data.drivers.find(e => e.id == results[results.length - 1].result[0]),
+                data.drivers.find(e => e.id == results[results.length - 1].result[1]),
                 data.drivers.find(e => e.id == results[results.length - 1].result[2])
             ];
         },
@@ -61,19 +74,20 @@ export default {
 <style scoped>
 .container {
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    height: 235px;
+
+    height: auto;
+    overflow: auto;
+    
 }
 .podium {
     box-shadow: 0 0 4px #000;
 }
 .container > * {
     margin: 0 10px;
-    background: #c9b037;
+    background: #d7d7d7;
 }
 .container > *:first-child {
-    background: #d7d7d7;
+    background: #c9b037;
 }
 .container > *:last-child {
     background: #ad8a56;

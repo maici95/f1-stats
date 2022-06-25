@@ -33,7 +33,7 @@ export default {
     border-bottom: 4px solid #FF1801;
     color: #ffffff;
     padding: 0 40px;
-    font-size: 14px;
+    font-size: 80%;
     text-shadow: 2px 2px 0 #000;
     display: flex;
     justify-content: space-between;
